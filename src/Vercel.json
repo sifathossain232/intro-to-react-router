@@ -1,0 +1,56 @@
+{
+    "version": 3,
+    "routes": [
+      {
+        "src": "/redirect",
+        "status": 308,
+        "headers": { "Location": "https://example.com/" }
+      },
+      {
+        "src": "/blog",
+        "dest": "/blog.$wildcard.html"
+      }
+    ],
+    "images": {
+      "sizes": [640, 750, 828, 1080, 1200],
+      "domains": [],
+      "minimumCacheTTL": 60,
+      "formats": ["image/avif", "image/webp"],
+      "remotePatterns": [
+        {
+          "protocol": "https",
+          "hostname": "^via\\.placeholder\\.com$",
+          "pathname": "^/1280x640/.*$"
+        }
+      ]
+    },
+    "wildcard": [
+      {
+        "domain": "example.com",
+        "value": "en-US"
+      },
+      {
+        "domain": "example.nl",
+        "value": "nl-NL"
+      },
+      {
+        "domain": "example.fr",
+        "value": "fr"
+      }
+    ],
+    "overrides": {
+      "blog.html": {
+        "path": "blog"
+      }
+    },
+    "cache": [".cache/**", "node_modules/**"],
+    "framework": {
+      "version": "1.2.3"
+    },
+    "crons": [
+      {
+        "path": "/api/cron",
+        "schedule": "* * * * *"
+      }
+    ]
+  }
