@@ -1,9 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
-// import { Link} from 'react-router-dom';
-=======
-
->>>>>>> c3e0af0ceeb8d63defe778932ea95d7b5ec1a262
 import ActiveLink from '../ActiveLink/ActiveLink';
 
 const Header = () => {
