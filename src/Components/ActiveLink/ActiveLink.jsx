@@ -8,6 +8,7 @@ const ActiveLink = ({to,children}) => {
             className={({ isActive }) => isActive ?'text-orange-500 font-bold underline' : ''}
         >
             {children}
+            <></>
         </NavLink>
     );
 };
